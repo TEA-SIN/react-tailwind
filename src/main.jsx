@@ -10,28 +10,36 @@ import {
 import About from '../pages/about/About.jsx';
 import Layout from './components/layout/Layout.jsx';
 import Service from '../pages/service/service.jsx';
+import Home from '../pages/home/Home.jsx';
+import ProductDetail from '../pages/products/ProductDetail.jsx';
+
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Layout/>,
+    path : '/',
+    element : <Layout/>,
+    
     children: [
       {
-        path: "/",
-        element: <App/>
+        path : '/',
+        element: <Home/>
       },
       {
-        path: "/app",
-        element: <App/>,
+        path: "/detail",
+        element: <ProductDetail/>
       },
       {
-        path: "/about",
-        element: <About/>,
+        path : '/home',
+        element : <Home/>
       },
       {
-        path: "/service",
-        element: <Service/>
+        path : '/about',
+        element : <About/>
       },
+      {
+        path : '/service',
+        element : <Service/>
+      }
     ]
   }
 ]);
